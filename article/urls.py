@@ -6,5 +6,5 @@ app_name = 'article'
 urlpatterns = [
     path('archive/', article_archive, name='archive'),
     path('category/', article_category, name='category'),
-    path('detail/', article_detail, name='detail')
+    path('detail/<slug:slug>/', article_detail, name='detail')
 ]
