@@ -36,7 +36,7 @@ class Article(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     image = models.ImageField(upload_to='media/articles', blank=True, null=True)
     slug = models.SlugField(unique=False, editable=True)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, blank=True, null=True)
     is_quote = models.BooleanField(default=False)
 
     def __str__(self):

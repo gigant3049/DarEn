@@ -39,7 +39,7 @@ class SubArticleInlineAdmin(admin.StackedInline):
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
     inlines = (SubArticleInlineAdmin, )
-    list_display = ('id', 'title')
+    list_display = ('id', 'title', 'image')
     readonly_fields = ('slug', 'created_date')
     search_fields = ('slug', 'title')
     list_filter = ('category', 'tags')
