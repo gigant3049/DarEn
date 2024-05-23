@@ -104,12 +104,12 @@
                         <div class="single_post media post_3">
                             <div class="single_post_img">
                                 <img src="{{ object.image.url }}" alt>
-                                <a href="http://127.0.0.1:8000/article/detail/second-divided-from-form-fish-beast-made-every-of-seas-all-gathered-us-saying-he-our-2024-01-26/"
+                                <a href="{% url 'article:detail' object.slug %}"
                                    class="category_btn">Tours & travel</a>
                             </div>
                             <div class="post_text_1 media-body align-self-center">
                                 <p><span>By {{ object.author }}</span> / {{ object.created_date }}</p>
-                                <a href="http://127.0.0.1:8000/article/detail/second-divided-from-form-fish-beast-made-every-of-seas-all-gathered-us-saying-he-our-2024-01-26/">
+                                <a href="{% url 'article:detail' object.slug %}">
                                     <h3>{{ object.title }}</h3>
                                 </a>
                                 <div class="post_icon">
